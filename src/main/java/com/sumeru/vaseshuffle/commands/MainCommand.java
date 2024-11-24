@@ -104,15 +104,13 @@ public class MainCommand implements CommandExecutor, TabCompleter {
 
                         @Override
                         public void run() {
-                            if (player.isOnline()) {
+                            if (player.isOnline()&&game.players.contains(player)) {
                                 if (countdown > 0) {
                                     player.sendTitle(Title.builder().title(ChatColor.RED + String.valueOf(countdown)).fadeIn(10).stay(20).fadeOut(10).build());
                                     countdown--;
                                 } else {
                                     player.sendTitle(Title.builder().title(ChatColor.GREEN + "START").fadeIn(10).stay(20).fadeOut(10).build());
-                                    if (player.isOnline()) {
-                                        game.round(game.vases, player, 1, 1);
-                                    }
+                                    game.round(game.vases, player, 1, 1);
                                     cancel();
                                 }
                             } else {

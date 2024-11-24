@@ -9,8 +9,5 @@ git add --all
 git commit -m $randomCommitMessage
 git branch -M main
 
-
-git remote add origin https://github.com/sumeru2/VaseShuffle.git
-
 # Отправка изменений на удаленный репозиторий
 git push -u origin main

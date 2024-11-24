@@ -64,13 +64,10 @@ public class EventListener implements Listener  {
 
                     Bukkit.getScheduler().runTaskLater(
                             VaseShuffle.instance,
-                            new Runnable() {
-                                @Override
-                                public void run() {
-                                    if (player.isOnline()) {
-                                        game.iterations++;
-                                        game.round(game.vases, player, 1, game.emeraldIndex.get());
-                                    }
+                            () -> {
+                                if (player.isOnline()&&game.players.contains(player)) {
+                                    game.iterations++;
+                                    game.round(game.vases, player, 1, game.emeraldIndex.get());
                                 }
                             },
                             (game.cooldown * 20L)

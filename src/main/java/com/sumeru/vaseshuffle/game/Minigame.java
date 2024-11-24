@@ -77,7 +77,7 @@ public final class Minigame {
                 }, timeToThink * 20L);
             } else {
                 Bukkit.getScheduler().scheduleSyncDelayedTask(VaseShuffle.instance, () -> {
-                    if (player.isOnline()) {
+                    if (player.isOnline()&&players.contains(player)) {
                         round(vases, player, current + 1, emeraldIndex.get());
                     }
                 }, cooldown * 20L / n);
