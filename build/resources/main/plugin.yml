@@ -1,0 +1,7 @@
+name: VaseShuffle
+version: 0.1
+main: com.sumeru.vaseshuffle.VaseShuffle
+api-version: '1.20'
+commands:
+  vshuffle:
+    description: VaseShuffle Main Command

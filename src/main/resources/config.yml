@@ -1,0 +1,7 @@
+spawn:
+  x:
+  y:
+  z:
+  world:
+cooldown: 5
+time-to-think: 5
